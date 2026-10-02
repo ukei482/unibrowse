@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UniBrowse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="titlebar" data-tauri-drag-region>
+    <button class="sm" id="collapse" title="サイドバーを折りたたむ"><span data-icon="menu"></span></button>
+    <button class="sm" id="new-tab" title="新しいタブ (Ctrl+T)"><span data-icon="plus"></span></button>
+    <span class="sep"></span>
+    <button class="sm" data-add="web" title="新しいタブでWebを開く"><span data-icon="globe"></span></button>
+    <button class="sm" data-add="files" title="新しいタブでフォルダを開く"><span data-icon="folder"></span></button>
+    <button class="sm" data-add="app" title="新しいタブでアプリ取り込み"><span data-icon="window"></span></button>
+    <span class="sep"></span>
+    <button class="sm" id="split-h" title="選択中のペインを左右に分割"><span data-icon="split-h"></span></button>
+    <button class="sm" id="split-v" title="選択中のペインを上下に分割"><span data-icon="split-v"></span></button>
+    <button class="sm" id="close-pane" title="選択中のペインを閉じる"><span data-icon="close"></span></button>
+    <button class="sm" id="bookmark-btn" title="選択中のペインをブックマークに追加/解除"><span data-icon="bookmark"></span></button>
+    <button class="sm" id="open-settings" title="設定"><span data-icon="settings"></span></button>
+    <span id="drag" data-tauri-drag-region>UniBrowse</span>
+    <button class="sm win" id="win-full" title="全画面 (F11)"><span data-icon="fullscreen"></span></button>
+    <button class="sm win" id="win-min" title="最小化"><span data-icon="minimize"></span></button>
+    <button class="sm win" id="win-max" title="最大化/元に戻す"><span data-icon="maximize"></span></button>
+    <button class="sm win close" id="win-close" title="閉じる"><span data-icon="close"></span></button>
+  </header>
+  <div id="app">
+    <aside id="sidebar">
+      <div id="bookmarks"></div>
+      <div class="side-sep" id="side-sep"></div>
+      <div id="tabs"></div>
+    </aside>
+    <div id="content">
+      <main id="workspace"></main>
+    </div>
+  </div>
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
